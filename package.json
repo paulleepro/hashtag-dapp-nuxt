@@ -9,14 +9,22 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@creativebulma/bulma-divider": "^1.0.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "apollo-boost": "^0.4.7",
     "bnc-onboard": "https://github.com/hashtag-protocol/onboard",
     "bnc-sdk": "^2.1.4",
     "buefy": "^0.8.15",
     "core-js": "^3.9.1",
     "ethers": "^4.0.46",
+    "graphql": "^14.6.0",
     "nuxt": "^2.15.3",
     "nuxt-buefy": "^0.4.4",
     "vue": "^2.6.11"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "markdown-it": "^11.0.0",
+    "node-sass": "^6.0.0",
+    "sass-loader": "^10.1.1"
+  }
 }

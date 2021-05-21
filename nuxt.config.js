@@ -11,7 +11,9 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href:"https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"},
+      { rel: 'stylesheet', href:"https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css"}
     ]
   },
 
@@ -34,7 +36,13 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/buefy
     'nuxt-buefy',
+    '@nuxtjs/style-resources',
   ],
+  styleResources: {
+    scss: [
+      '~/assets/css/*.scss',
+    ]
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
