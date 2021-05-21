@@ -1,13 +1,13 @@
 <template>
   <span class="has-text-weight-bold">
-    <next-link
+    <nuxt-link
       :to="{
         name: 'nft-detail',
         params: { type: type, contract: contract, id: id },
       }"
     >
       {{ name }}
-    </next-link>
+    </nuxt-link>
   </span>
 </template>
 

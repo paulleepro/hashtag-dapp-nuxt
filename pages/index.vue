@@ -45,8 +45,8 @@
                     >
                       <template slot="footer" v-if="!isCustom">
                         <div class="has-text-right">
-                          <next-link :to="{ name: 'hashtags' }"
-                            >Browse hashtags </next-link
+                          <nuxt-link :to="{ name: 'hashtags' }"
+                            >Browse hashtags </nuxt-link
                           >&nbsp;
                           <b-icon
                             icon="arrow-right"
@@ -106,8 +106,8 @@
                     <b-table :data="tags || []" focusable>
                       <template slot="footer" v-if="!isCustom">
                         <div class="has-text-right">
-                          <next-link :to="{ name: 'nfts' }"
-                            >Browse tagged assets </next-link
+                          <nuxt-link :to="{ name: 'nfts' }"
+                            >Browse tagged assets </nuxt-link
                           >&nbsp;
                           <b-icon
                             icon="arrow-right"
@@ -119,7 +119,7 @@
                       </template>
                       <template slot-scope="props">
                         <b-table-column field="nftId" centered>
-                          <next-link
+                          <nuxt-link
                             :to="{
                               name: 'nft-detail',
                               params: {
@@ -134,7 +134,7 @@
                               :alt="props.row.nftName"
                               class="nft-thumb"
                             />
-                          </next-link>
+                          </nuxt-link>
                         </b-table-column>
                         <b-table-column field="nftName" label="Asset Name">
                           <nft-link
@@ -181,8 +181,8 @@
                     <b-table :data="creators || []">
                       <template slot="footer" v-if="!isCustom">
                         <div class="has-text-right">
-                          <next-link :to="{ name: 'creators' }"
-                            >Browse creators </next-link
+                          <nuxt-link :to="{ name: 'creators' }"
+                            >Browse creators </nuxt-link
                           >&nbsp;
                           <b-icon
                             icon="arrow-right"
@@ -241,8 +241,8 @@
                     <b-table :data="publishers || []">
                       <template slot="footer" v-if="!isCustom">
                         <div class="has-text-right">
-                          <next-link :to="{ name: 'publishers' }"
-                            >Browse publishers </next-link
+                          <nuxt-link :to="{ name: 'publishers' }"
+                            >Browse publishers </nuxt-link
                           >&nbsp;
                           <b-icon
                             icon="arrow-right"
@@ -305,8 +305,8 @@
                     <b-table :data="taggers || []" focusable>
                       <template slot="footer" v-if="!isCustom">
                         <div class="has-text-right">
-                          <next-link :to="{ name: 'taggers' }"
-                            >Browse taggers </next-link
+                          <nuxt-link :to="{ name: 'taggers' }"
+                            >Browse taggers </nuxt-link
                           >&nbsp;
                           <b-icon
                             icon="arrow-right"
@@ -351,8 +351,8 @@
                     <b-table :data="popular || []" focusable>
                       <template slot="footer" v-if="!isCustom">
                         <div class="has-text-right">
-                          <next-link :to="{ name: 'hashtags' }"
-                            >Browse hashtags </next-link
+                          <nuxt-link :to="{ name: 'hashtags' }"
+                            >Browse hashtags </nuxt-link
                           >&nbsp;
                           <b-icon
                             icon="arrow-right"

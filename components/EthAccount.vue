@@ -2,14 +2,14 @@
   <span>
     <b-tooltip :label="value" position="is-bottom" type="is-dark">
       <span v-if="route">
-        <next-link :to="{ name: route, params: { address: value } }">
+        <nuxt-link :to="{ name: route, params: { address: value } }">
           <span v-if="ens">
             {{ ens }}
           </span>
           <span v-else>
             {{ value | shortEth }}
           </span>
-        </next-link>
+        </nuxt-link>
       </span>
       <span v-else>
         <span v-if="ens">
