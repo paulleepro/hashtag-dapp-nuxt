@@ -163,7 +163,7 @@ export default {
         },
         discord: {
           text: "Discord",
-          path: this.$appConfig.discordServer,
+          path: process.env.discordServer,
         },
         substack: {
           text: "Substack",
@@ -196,7 +196,7 @@ export default {
     this.initOnboard();
   },
   beforeDestroy() {
-    this.unsubscribe();
+    this.unsubscribe?.();
   },
   computed: mapGetters(["accrued", "balance", "address", "onboard", "wallet"]),
   methods: {
@@ -224,7 +224,7 @@ export default {
       this.$store.dispatch("captureOpenModalCloseFn", result.close);
     },
     setCurrentMenu() {
-      this.currentMenu = this.$data.sectionsMenuArr[this.section].text;
+      this.currentMenu = this.$data.sectionsMenuArr[this.section]?.text;
     },
     drawdown() {
       const result = this.$buefy.modal.open({

@@ -1,8 +1,8 @@
 <template>
   <span class="has-text-weight-bold">
-    <router-link :to="{ name: 'hashtag-detail', params: { hashtag: dest } }">
+    <next-link :to="{ name: 'hashtag-detail', params: { hashtag: dest } }">
       {{ value }}
-    </router-link>
+    </next-link>
   </span>
 </template>
 

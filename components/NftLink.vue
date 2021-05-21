@@ -1,13 +1,13 @@
 <template>
   <span class="has-text-weight-bold">
-    <router-link
+    <next-link
       :to="{
         name: 'nft-detail',
         params: { type: type, contract: contract, id: id },
       }"
     >
       {{ name }}
-    </router-link>
+    </next-link>
   </span>
 </template>
 
