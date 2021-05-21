@@ -66,7 +66,7 @@
                         <td data-label="Owner" class="">
                           <eth-account
                             :value="publisher.id"
-                            route="publisher-detail"
+                            route="publisher-address"
                           ></eth-account>
                         </td>
                         <td data-label="Hashtags" class="has-text-centered">

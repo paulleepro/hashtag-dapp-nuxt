@@ -123,7 +123,7 @@
                             <td data-label="Publisher" class="">
                               <eth-account
                                 :value="hashtag.publisher"
-                                route="publisher-detail"
+                                route="publisher-address"
                               ></eth-account>
                             </td>
                           </tr>
@@ -168,7 +168,7 @@
                             <td class="has-text-centered">
                               <nuxt-link
                                 :to="{
-                                  name: 'nft-detail',
+                                  name: 'type-contract-id',
                                   params: {
                                     type: 'nft',
                                     contract: tag.nftContract,
@@ -207,7 +207,7 @@
                             <td data-label="Tagger" class="">
                               <eth-account
                                 :value="tag.tagger"
-                                route="tagger-detail"
+                                route="tagger-address"
                               ></eth-account>
                             </td>
                           </tr>

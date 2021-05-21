@@ -54,7 +54,7 @@
                         <td data-label="Tagger" class="">
                           <eth-account
                             :value="tagger.id"
-                            route="tagger-detail"
+                            route="tagger-address"
                           ></eth-account>
                         </td>
                         <td data-label="Tag count" class="has-text-centered">

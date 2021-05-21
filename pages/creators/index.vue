@@ -66,7 +66,7 @@
                         <td data-label="Owner" class="">
                           <eth-account
                             :value="creator.id"
-                            route="creator-detail"
+                            route="creator-address"
                           ></eth-account>
                         </td>
                         <td data-label="Hashtags" class="has-text-centered">
