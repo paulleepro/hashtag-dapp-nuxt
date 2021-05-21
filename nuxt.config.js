@@ -46,5 +46,15 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  env: {
+    hashtagSubgraph: process.env.VUE_APP_HASHTAG_SUBGRAPH_URL || 'https://api.thegraph.com/subgraphs/name/hashtag-protocol/hashtag-rinkeby',
+    nftSearchSubgraph: process.env.VUE_APP_TOP_NFTS_SUBGRAPH_URL || 'https://api.thegraph.com/subgraphs/name/blockrockettech/nft-tokens',
+    blocknativeApiKey: process.env.VUE_APP_BLOCKNATIVE_API_KEY || '',
+    onboardNetworkID: process.env.VUE_APP_ONBOARD_NETWORK_ID,
+    publisherWalletAddress: process.env.VUE_APP_PUBLISHER_ADDRESS || '0xD677AEd0965AC9B54e709F01A99cEcA205aebC4B',
+    localstorageWalletKey: process.env.VUE_APP_ONBOARD_LOCALSTORAGE_WALLET_KEY || 'HashtagSelectedWallet',
+    discordServer: process.env.VUE_APP_DISCORD_SERVER || 'http://localhost:8080/'
   }
 }
