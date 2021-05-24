@@ -23,6 +23,10 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/vue-axios',
+    '~/plugins/vue-buefy',
+    '~/plugins/vue-moment',
+    '~/plugins/vue-screen',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -36,6 +40,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/buefy
     'nuxt-buefy',
+    '@nuxtjs/apollo',
     '@nuxtjs/style-resources',
   ],
   styleResources: {
@@ -56,5 +61,17 @@ export default {
     publisherWalletAddress: process.env.VUE_APP_PUBLISHER_ADDRESS || '0xD677AEd0965AC9B54e709F01A99cEcA205aebC4B',
     localstorageWalletKey: process.env.VUE_APP_ONBOARD_LOCALSTORAGE_WALLET_KEY || 'HashtagSelectedWallet',
     discordServer: process.env.VUE_APP_DISCORD_SERVER || 'http://localhost:8080/'
-  }
+  },
+
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: process.env.VUE_APP_HASHTAG_SUBGRAPH_URL || 'https://api.thegraph.com/subgraphs/name/hashtag-protocol/hashtag-rinkeby',
+      },
+      hashtagClient: {
+        httpEndpoint: process.env.VUE_APP_HASHTAG_SUBGRAPH_URL || 'https://api.thegraph.com/subgraphs/name/hashtag-protocol/hashtag-rinkeby',
+        nftsClient: process.env.VUE_APP_TOP_NFTS_SUBGRAPH_URL || 'https://api.thegraph.com/subgraphs/name/blockrockettech/nft-tokens',
+      }
+    }
+  },
 }

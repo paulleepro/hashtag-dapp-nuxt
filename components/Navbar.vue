@@ -1,7 +1,7 @@
 <template>
   <b-navbar :transparent="true">
     <template slot="brand">
-      <b-navbar-item :href="this.app">
+      <b-navbar-item href="https://app.hashtag-protocol.org">
         <img
           src="~/assets/logo-white.svg"
           alt="Content tagging for the decentralized web"
@@ -42,7 +42,7 @@
       </b-navbar-item>
       <b-navbar-dropdown
         class="is-hidden-desktop is-hidden-tablet-only mobile-menu"
-        arrowless="true"
+        :arrowless="true"
       >
         <b-navbar-item
           v-for="(value, key) in sectionsMenuArr"
