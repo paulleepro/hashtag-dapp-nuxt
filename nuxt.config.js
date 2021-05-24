@@ -23,8 +23,10 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/global-mixin.client',
     '~/plugins/vue-axios',
     '~/plugins/vue-buefy',
+    '~/plugins/vue-filter',
     '~/plugins/vue-moment',
     '~/plugins/vue-screen',
   ],
@@ -41,6 +43,7 @@ export default {
     // https://go.nuxtjs.dev/buefy
     'nuxt-buefy',
     '@nuxtjs/apollo',
+    '@nuxtjs/gtm',
     '@nuxtjs/style-resources',
   ],
   styleResources: {
@@ -61,6 +64,13 @@ export default {
     publisherWalletAddress: process.env.VUE_APP_PUBLISHER_ADDRESS || '0xD677AEd0965AC9B54e709F01A99cEcA205aebC4B',
     localstorageWalletKey: process.env.VUE_APP_ONBOARD_LOCALSTORAGE_WALLET_KEY || 'HashtagSelectedWallet',
     discordServer: process.env.VUE_APP_DISCORD_SERVER || 'http://localhost:8080/'
+  },
+
+  gtm: {
+    id: 'GTM-MRK383F',
+    enabled: true,
+    debug: true,
+    pageTracking: true,
   },
 
   apollo: {

@@ -7,6 +7,12 @@ import ERC721HashtagRegistry from "~/truffleconf/ERC721HashtagRegistry";
 import utils from "~/utils";
 import eventMap from "~/data/blocknativeEventMap";
 
+let provider;
+let onboard = {};
+let blocknative = {};
+
+const localstorageWalletKey = process.env.localstorageWalletKey;
+
 export default {
   async initOnboard({ dispatch, commit }) {
     // Initialize onboard.

@@ -163,7 +163,7 @@ export default {
         },
         discord: {
           text: "Discord",
-          path: process.env.discordServer,
+          path: this.discordServer,
         },
         substack: {
           text: "Substack",
@@ -201,16 +201,18 @@ export default {
   computed: mapGetters(["accrued", "balance", "address", "onboard", "wallet"]),
   methods: {
     async initOnboard() {
-      await this.$store.dispatch("initOnboard");
+    console.log('initOnboard: ========')
+
+      await this.$store.dispatch("wallet/initOnboard");
     },
     async initProtocol() {
-      await this.$store.dispatch("initProtocol");
+      await this.$store.dispatch("wallet/initProtocol");
     },
     async connectWallet() {
-      await this.$store.dispatch("connectWallet");
+      await this.$store.dispatch("wallet/connectWallet");
     },
     async disconnectWallet() {
-      await this.$store.dispatch("disconnectWallet");
+      await this.$store.dispatch("wallet/disconnectWallet");
     },
     walletInfo() {
       const result = this.$buefy.modal.open({
@@ -221,7 +223,7 @@ export default {
         trapFocus: true,
         width: 550,
       });
-      this.$store.dispatch("captureOpenModalCloseFn", result.close);
+      this.$store.dispatch("wallet/captureOpenModalCloseFn", result.close);
     },
     setCurrentMenu() {
       this.currentMenu = this.$data.sectionsMenuArr[this.section]?.text;
@@ -236,7 +238,7 @@ export default {
         width: 550,
       });
 
-      this.$store.dispatch("captureOpenModalCloseFn", result.close);
+      this.$store.dispatch("wallet/captureOpenModalCloseFn", result.close);
     },
   },
 };

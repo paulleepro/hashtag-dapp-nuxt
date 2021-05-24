@@ -61,8 +61,6 @@ export default {
     return {
       build: "",
       year: "2020",
-      discordServer: process.env.discordServer,
-      website: "https://www.hashtag-protocol.org",
     };
   },
   mounted() {
