@@ -201,8 +201,6 @@ export default {
   computed: mapGetters(["accrued", "balance", "address", "onboard", "wallet"]),
   methods: {
     async initOnboard() {
-    console.log('initOnboard: ========')
-
       await this.$store.dispatch("wallet/initOnboard");
     },
     async initProtocol() {
